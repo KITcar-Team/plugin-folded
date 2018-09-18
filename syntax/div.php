@@ -27,8 +27,8 @@ class syntax_plugin_folded_div extends DokuWiki_Syntax_Plugin {
     function getPType() { return 'stack'; }
     function getAllowedTypes() { return array('container','substition','protected','disabled','paragraphs','formatting'); }
     function getSort(){ return 404; }
-    function connectTo($mode) { $this->Lexer->addEntryPattern('\+\+\+\+.*?\|(?=.*\+\+\+\+)',$mode,'plugin_folded_div'); }
-    function postConnect() { $this->Lexer->addExitPattern('\+\+\+\+','plugin_folded_div'); }
+    function connectTo($mode) { $this->Lexer->addEntryPattern('\~\~\~\~.*?\|(?=.*\~\~\~\~)',$mode,'plugin_folded_div'); }
+    function postConnect() { $this->Lexer->addExitPattern('\~\~\~\~','plugin_folded_div'); }
 
    /**
     * Handle the match

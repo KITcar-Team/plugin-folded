@@ -25,8 +25,8 @@ class syntax_plugin_folded_span extends DokuWiki_Syntax_Plugin {
     function getType(){ return 'formatting'; }
     function getAllowedTypes() { return array('substition','protected','disabled','formatting'); }
     function getSort(){ return 405; }
-    function connectTo($mode) { $this->Lexer->addEntryPattern('\+\+.*?\|(?=.*\+\+)',$mode,'plugin_folded_span'); }
-    function postConnect() { $this->Lexer->addExitPattern('\+\+','plugin_folded_span'); }
+    function connectTo($mode) { $this->Lexer->addEntryPattern('\~\~.*?\|(?=.*\~\~)',$mode,'plugin_folded_span'); }
+    function postConnect() { $this->Lexer->addExitPattern('\~\~','plugin_folded_span'); }
 
    /**
     * Handle the match
